@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Fitness Tracker</string>
-    <string name="label_imc">IMC</string>
+    <string name="label_bmi">BMI</string>
+    <string name="bmi_desc">Body Mass Index (BMI) is a person’s weight in kilograms (or pounds) divided by the square of height in meters (or feet). \n\nFill the fields below to calculate it.</string>
+    <string name="weight">Weight (Kg)</string>
+    <string name="height">Height (cm)</string>
+    <string name="calc_bmi">calculate</string>
 </resources>
