@@ -9,6 +9,7 @@
     android:gravity="center">
 
     <LinearLayout
+        android:id="@+id/btn_imc"
         android:background="@color/color_light_gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
