@@ -5,4 +5,5 @@
     <string name="weight">Weight (Kg)</string>
     <string name="height">Height (cm)</string>
     <string name="calc_bmi">calculate</string>
+    <string name="fields_error_message">All fields must be greather than 0</string>
 </resources>
