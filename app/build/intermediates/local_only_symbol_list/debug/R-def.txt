@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color color_light_gray
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_baseline_monitor_weight_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btn_bmi_send
+id btn_imc
+id edit_bmi_height
+id edit_bmi_weight
+layout activity_imc
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string bmi_desc
+string calc_bmi
+string fields_error_message
+string height
+string label_bmi
+string weight
+style ButtonForm
+style EditTextForm
+style TextViewForm
+style Theme.FitnessTracker
+xml backup_rules
+xml data_extraction_rules
