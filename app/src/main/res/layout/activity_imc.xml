@@ -13,38 +13,24 @@
         tools:context=".ImcActivity">
 
         <TextView
+            style="@style/TextViewForm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="40dp"
             android:text="@string/bmi_desc" />
 
         <EditText
             android:id="@+id/edit_bmi_weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="40dp"
-            android:hint="@string/weight"
-            android:inputType="number"
-            android:maxLength="3" />
+            style="@style/EditTextForm"
+            android:hint="@string/weight" />
 
         <EditText
             android:id="@+id/edit_bmi_height"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="40dp"
-            android:hint="@string/height"
-            android:inputType="number"
-            android:maxLength="3" />
+            style="@style/EditTextForm"
+            android:hint="@string/height" />
 
         <Button
             android:id="@+id/btn_bmi_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/teal_200"
+            style="@style/ButtonForm"
             android:text="@string/calc_bmi" />
 
     </LinearLayout>
