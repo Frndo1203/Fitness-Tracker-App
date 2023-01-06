@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/monitor_weight/baseline_monitor_weight_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/local_fire_department/baseline_local_fire_department_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,7 +29,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="b15b24" />
-                            <entry key="outputName" value="ic_baseline_monitor_weight_24" />
+                            <entry key="outputName" value="ic_baseline_local_fire_department_24" />
                             <entry key="sourceFile" value="C:\Users\olive\AndroidStudioProjects\FitnessTracker" />
                           </map>
                         </option>
