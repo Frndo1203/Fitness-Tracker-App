@@ -11,14 +11,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.pow
 
-class ImcActivity : AppCompatActivity() {
+class BmiActivity : AppCompatActivity() {
 
     private lateinit var editWeight: EditText
     private lateinit var editHeight: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_imc)
+        setContentView(R.layout.activity_bmi)
 
         editWeight = findViewById(R.id.edit_bmi_weight)
         editHeight = findViewById(R.id.edit_bmi_height)
