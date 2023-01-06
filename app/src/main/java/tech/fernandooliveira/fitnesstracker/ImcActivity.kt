@@ -5,6 +5,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.pow
 
@@ -33,7 +34,13 @@ class ImcActivity : AppCompatActivity() {
             val result = calculateBmi(weight, height)
 
             val bmiResponseId = bmiResponse(result)
-            Toast.makeText(this, bmiResponseId, Toast.LENGTH_SHORT).show()
+
+            val title = getString(R.string.bmi_response_title, result)
+
+            val dialog = AlertDialog.Builder(this).setTitle(title).setMessage(bmiResponseId)
+                .setPositiveButton(R.string.ok) { dialog, which ->
+                    dialog.dismiss()
+                }.create().show()
 
         }
 

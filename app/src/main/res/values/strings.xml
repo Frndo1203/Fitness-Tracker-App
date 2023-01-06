@@ -6,6 +6,7 @@
     <string name="height">Height (cm)</string>
     <string name="calc_bmi">calculate</string>
     <string name="fields_error_message">All fields must be greater than 0</string>
+
     <string name="bmi_severely_low_weight">Severely underweight</string>
     <string name="bmi_very_low_weight">Very underweight</string>
     <string name="bmi_low_weight">Underweight</string>
@@ -15,6 +16,7 @@
     <string name="bmi_severely_high_weight">Severely obese</string>
     <string name="bmi_extreme_weight">Extremely obese</string>
     <string name="bmi_response_error">Occurred an error during the calculation. Please, Try Again!</string>
+
     <string name="bmi_response">bmi: %1$.2f</string>
     <string name="save">Save</string>
     <string name="calc_saved">Register saved successfully</string>
@@ -25,4 +27,7 @@
     <string name="tmb_response">BMR: %1$.2f</string>
     <string name="delete_message">Do you really want to exclude this register?</string>
     <string name="cancel">Cancel</string>
+
+    <string name="bmi_response_title">Your BMI is: %1$.2f</string>
+    <string name="ok">Ok</string>
 </resources>
