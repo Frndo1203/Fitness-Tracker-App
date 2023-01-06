@@ -1,7 +1,6 @@
 package tech.fernandooliveira.fitnesstracker
 
 import android.content.Context
-import android.inputmethodservice.InputMethodService
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
