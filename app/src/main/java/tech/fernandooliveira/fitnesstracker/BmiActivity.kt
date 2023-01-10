@@ -1,6 +1,9 @@
 package tech.fernandooliveira.fitnesstracker
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -40,20 +43,18 @@ class BmiActivity : AppCompatActivity() {
 
             val title = getString(R.string.bmi_response_title, result)
 
-            val dialog = AlertDialog.Builder(this).setTitle(title).setMessage(bmiResponseId)
+            AlertDialog.Builder(this).setTitle(title).setMessage(bmiResponseId)
 
-                .setPositiveButton(R.string.ok) { dialog, which ->
+                .setPositiveButton(R.string.ok) { dialog, _ ->
                     dialog.dismiss()
-                }.setNegativeButton(R.string.save) { dialog, which ->
+                }.setNegativeButton(R.string.save) { _, _ ->
                     Thread {
                         val app = application as App
                         val dao = app.db.calcDao()
                         dao.insert(Calc(type = "bmi", res = result))
 
                         runOnUiThread { // every Ui event should happen in UI Thread
-                            Toast.makeText(
-                                this@BmiActivity, R.string.save_success, Toast.LENGTH_SHORT
-                            ).show()
+                            openListActivity()
                         }
                     }.start()
                 }.create().show()
@@ -64,6 +65,25 @@ class BmiActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_search) {
+            finish()
+            openListActivity()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun openListActivity() {
+        val intent = Intent(this, ListCalcActivity::class.java)
+        intent.putExtra("type", "bmi")
+        startActivity(intent)
     }
 
     @StringRes
