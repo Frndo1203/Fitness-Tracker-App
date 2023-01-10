@@ -30,5 +30,6 @@
     <string name="cancel">Cancel</string>
 
     <string name="bmi_response_title">Your BMI is: %1$.2f</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
+    <string name="save_success">Successfully saved your BMI</string>
 </resources>

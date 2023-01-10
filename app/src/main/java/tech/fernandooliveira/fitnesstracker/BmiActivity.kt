@@ -1,6 +1,5 @@
 package tech.fernandooliveira.fitnesstracker
 
-import android.content.Context
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -9,6 +8,8 @@ import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import tech.fernandooliveira.fitnesstracker.model.App
+import tech.fernandooliveira.fitnesstracker.model.Calc
 import kotlin.math.pow
 
 class BmiActivity : AppCompatActivity() {
@@ -40,11 +41,24 @@ class BmiActivity : AppCompatActivity() {
             val title = getString(R.string.bmi_response_title, result)
 
             val dialog = AlertDialog.Builder(this).setTitle(title).setMessage(bmiResponseId)
+
                 .setPositiveButton(R.string.ok) { dialog, which ->
                     dialog.dismiss()
+                }.setNegativeButton(R.string.save) { dialog, which ->
+                    Thread {
+                        val app = application as App
+                        val dao = app.db.calcDao()
+                        dao.insert(Calc(type = "bmi", res = result))
+
+                        runOnUiThread { // every Ui event should happen in UI Thread
+                            Toast.makeText(
+                                this@BmiActivity, R.string.save_success, Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }.start()
                 }.create().show()
 
-            val service = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            val service = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             service.hideSoftInputFromWindow(currentFocus?.windowToken, 0)
 
         }
