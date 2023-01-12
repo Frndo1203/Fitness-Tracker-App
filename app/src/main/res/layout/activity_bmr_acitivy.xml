@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".bmrActivity">
+
+        <TextView
+            style="@style/TextViewForm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bmr_desc" />
+
+        <EditText
+            android:id="@+id/edit_bmr_weight"
+            style="@style/EditTextForm"
+            android:hint="@string/weight"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edit_bmr_height"
+            style="@style/EditTextForm"
+            android:hint="@string/height"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/edit_bmr_age"
+            style="@style/EditTextForm"
+            android:hint="@string/age"
+            android:importantForAutofill="no" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/AutoTextViewForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_lifestyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_bmr_send"
+            style="@style/ButtonForm"
+            android:text="@string/calc_bmr" />
+
+    </LinearLayout>
+</ScrollView>
